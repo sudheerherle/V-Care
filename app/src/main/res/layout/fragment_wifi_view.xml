@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingStart="10dp"
+    android:id="@+id/wifi_detail_fragment"
+    tools:context="tub.inquisit.com.vcare.WifiDetailActivity"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="fill_horizontal|center_horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/RefreshBtn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connection Status"
+                android:id="@+id/WifiStatus"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/accent_material_light" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wifi_status_icon"
+                android:src="@android:drawable/presence_offline"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/WifiStatus"
+                android:layout_alignParentTop="false" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:layout_alignParentRight="true"
+            android:id="@+id/RefreshBtn"
+            android:enabled="true"
+            android:foregroundGravity="right"
+            android:singleLine="false" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="fill"
+        android:layout_alignParentStart="false"
+        android:weightSum="1"
+        android:background="@drawable/tank"
+        android:foreground="@color/abc_search_url_text_selected"
+        android:layout_alignParentEnd="false"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentLeft="false">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Percentage_filled"
+            android:text="NA"
+            style="@style/style0"
+            android:singleLine="true"
+            android:shadowColor="#fd0505"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_gravity="center"
+            android:layout_weight="1.33" />
+    </LinearLayout>
+</RelativeLayout>
+

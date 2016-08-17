@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff9f9f9"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wifiIcon"
+        android:src="@mipmap/ic_wifi"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="WiFi SSID"
+        android:id="@+id/ListItemWifiSSID"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/wifiIcon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginTop="2dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SSID Strength"
+        android:id="@+id/ListItemSSIDStrength"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/ListItemWifiSSID"
+        android:layout_toEndOf="@+id/wifiIcon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        />
+
+
+</RelativeLayout>
